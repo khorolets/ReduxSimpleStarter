@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "build-js": "node ./node_modules/webpack/bin/webpack.js"
   },
   "author": "",
   "license": "ISC",
@@ -27,11 +28,14 @@
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "css-loader": "^0.23.1",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",
     "react-router": "^2.0.1",
-    "redux": "^3.0.4"
+    "redux": "^3.0.4",
+    "style-loader": "^0.13.1"
   }
 }
